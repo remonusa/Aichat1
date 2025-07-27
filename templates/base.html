@@ -1,0 +1,52 @@
+<!-- templates/base.html - Base template with header and navigation -->
+<!-- Location: templates directory -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}AI Chat App{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Header Menu -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <h1>AI Chat</h1>
+            </div>
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="{{ url_for('about') }}">About</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <!-- Left Navigation Bar -->
+        <aside class="sidebar">
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="{{ url_for('index') }}" class="nav-item">Dashboard</a></li>
+                    <li><a href="#" class="nav-item">Chat History</a></li>
+                    <li><a href="#" class="nav-item">Settings</a></li>
+                    <li><a href="#" class="nav-item">Profile</a></li>
+                    <li><a href="#" class="nav-item">Help</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            {% block content %}
+            {% endblock %}
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html> 

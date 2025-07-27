@@ -1,0 +1,72 @@
+<!-- templates/index.html - Index page template -->
+<!-- Location: templates directory -->
+
+{% extends "base.html" %}
+
+{% block title %}AI Chat - Home{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="welcome-section">
+        <h2>Welcome to AI Chat Version 1</h2>
+        <p>Experience the future of conversation with our advanced AI chat system.</p>
+    </div>
+
+    <div class="chat-section">
+        <div class="chat-container">
+            <div class="chat-header">
+                <h3>AI Assistant</h3>
+                <span class="status">Online</span>
+            </div>
+            
+            <div class="chat-messages">
+                <div class="message ai-message">
+                    <div class="message-content">
+                        <p>Hello! I'm your AI assistant. How can I help you today?</p>
+                    </div>
+                    <div class="message-time">Just now</div>
+                </div>
+                
+                <div class="message user-message">
+                    <div class="message-content">
+                        <p>Hi! Can you help me with some questions?</p>
+                    </div>
+                    <div class="message-time">Just now</div>
+                </div>
+                
+                <div class="message ai-message">
+                    <div class="message-content">
+                        <p>Of course! I'd be happy to help you with any questions you have. What would you like to know?</p>
+                    </div>
+                    <div class="message-time">Just now</div>
+                </div>
+            </div>
+            
+            <div class="chat-input">
+                <form class="message-form">
+                    <input type="text" placeholder="Type your message here..." class="message-input">
+                    <button type="submit" class="send-button">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="features-section">
+        <h3>Key Features</h3>
+        <div class="features-grid">
+            <div class="feature-card">
+                <h4>Smart Conversations</h4>
+                <p>Engage in intelligent conversations with our advanced AI.</p>
+            </div>
+            <div class="feature-card">
+                <h4>24/7 Availability</h4>
+                <p>Get instant responses anytime, anywhere.</p>
+            </div>
+            <div class="feature-card">
+                <h4>Learning Capabilities</h4>
+                <p>Our AI learns from each interaction to provide better responses.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 
